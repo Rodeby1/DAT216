@@ -1,0 +1,28 @@
+^E:\PROGRAMMING\DAT216\LAB2-RESOURCES-V3\BUILD\WINDOWS\X64\CMAKEFILES\49417BAC1FA75D77E52F8111CF6E2266\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\olive\dev\flutter PROJECT_DIR=E:\Programming\DAT216\lab2-resources-v3 FLUTTER_ROOT=C:\Users\olive\dev\flutter FLUTTER_EPHEMERAL_DIR=E:\Programming\DAT216\lab2-resources-v3\windows\flutter\ephemeral PROJECT_DIR=E:\Programming\DAT216\lab2-resources-v3 FLUTTER_TARGET=E:\Programming\DAT216\lab2-resources-v3\lib\main.dart DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=E:\Programming\DAT216\lab2-resources-v3\.dart_tool\package_config.json C:/Users/olive/dev/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\PROGRAMMING\DAT216\LAB2-RESOURCES-V3\BUILD\WINDOWS\X64\CMAKEFILES\92416C5EB3BE73C0B79E7CB86DFC9979\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\PROGRAMMING\DAT216\LAB2-RESOURCES-V3\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/Programming/DAT216/lab2-resources-v3/windows -BE:/Programming/DAT216/lab2-resources-v3/build/windows/x64 --check-stamp-file E:/Programming/DAT216/lab2-resources-v3/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

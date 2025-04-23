@@ -1,0 +1,10 @@
+^E:\PROGRAMMING\DAT216\LAB2-RESOURCES-V3\BUILD\WINDOWS\X64\CMAKEFILES\2290E4F295575FAFDE194405EAE31EF2\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,10 @@
+^E:\PROGRAMMING\DAT216\LAB2-RESOURCES-V3\BUILD\WINDOWS\X64\CMAKEFILES\2290E4F295575FAFDE194405EAE31EF2\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/Programming/DAT216/lab2-resources-v3/windows -BE:/Programming/DAT216/lab2-resources-v3/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/Programming/DAT216/lab2-resources-v3/build/windows/x64/lab1.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
