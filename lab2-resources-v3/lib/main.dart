@@ -11,6 +11,10 @@ import 'package:lab2/widgets/recipe_list.dart';
 import 'package:lab2/widgets/recipe_detail.dart';
 import 'package:lab2/ui_controller.dart';
 import 'package:lab2/widgets/recipe_area.dart';
+import 'package:lab2/widgets/logo.dart';
+import 'package:lab2/app_theme.dart';
+
+
 
 void main() {
     runApp(
@@ -31,59 +35,56 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        colorScheme: AppTheme.colorScheme,
+        textTheme: AppTheme.textTheme,
+      ),
       home: Scaffold(
-        body: Row(children: [_controlPanel(context), RecipeArea()]),
+        body: Row(children: 
+        [const SizedBox(width: AppTheme.paddingMedium),
+          _controlPanel(context), 
+        const SizedBox(width: AppTheme.paddingLarge),
+        RecipeArea(),
+        const SizedBox(width: AppTheme.paddingMedium),]),
       ),
     );
   }
    Widget _controlPanel(context, {double width = 320}) {
     return Container(
       width: width,
-      color: const Color.fromARGB(255, 193, 210, 218),
       child: Column(
         children: const [
-          Text(
-            'Receptsök',
-            style: TextStyle(fontSize: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center, // Center the Logo horizontally
+            children: [
+              Logo(),
+            ],
           ),
-          Text(
+          Center(
+            child: Text(
             'Hitta ett recept som passar genom att ändra inställningarna nedanför',
             style: TextStyle(fontSize: 16),
+            textAlign: TextAlign.center,
           ),
-          SizedBox(height: 16),
-          Row(
-            children: const [
-              Text(
-                'Ingrediens:',
-                style: TextStyle(fontSize: 16),
-              ),
-              SizedBox(width: 10), // Mellanrum mellan text och kontroll
-              IngredientControl(),
-            ],
           ),
-          Row(
-            children: const [
-              Text(
-                'Kök:',
-                style: TextStyle(fontSize: 16),
-              ),
-              SizedBox(width: 10), // Mellanrum mellan text och kontroll
-              KitchenControl(),
-            ],
-          ),
-          SizedBox(height: 16),
+          
+          AppTheme.pad,
+          IngredientControl(),
+          AppTheme.pad,
+          KitchenControl(),
+          AppTheme.pad,
           Text(
             'Svårighetsgrad:',
             style: TextStyle(fontSize: 16),
           ),
           DifficulyControl(),
-          SizedBox(height: 32),
+          AppTheme.padBig,
           Text(
             'Maxpris:',
             style: TextStyle(fontSize: 16),
           ),
           PriceControl(),
-          SizedBox(height: 32),
+          AppTheme.padBig,
           Text(
             'Maxtid:',
             style: TextStyle(fontSize: 16),
